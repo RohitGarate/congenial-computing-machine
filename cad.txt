@@ -29,7 +29,7 @@ $scope.item = undefined;
 };
 }]);
 
---------------------------------------------
+---------------------------------------------------------------------------
 
 2.Update the Index.cshtml file Open Views/Home/Index.cshtml, the view specific to the Home controller.
 
@@ -86,7 +86,7 @@ Remove
 </div>
 </div>
 
---------------------------
+-----------------------------------------------------------------------
 
 3.Update the _Layout.cshtml file, Open Views/Shared/_Layout.cshtml
 
@@ -112,7 +112,7 @@ required: false)
 </body>
 </html>
 
--------------------------------
+----------------------------------------------------------------------
 
 4.Update the VotingWeb.cs file
 
@@ -165,7 +165,7 @@ new Uri($”{context.CodePackageActivationContext.ApplicationName}/VotingData”
 }
 }
 
------------------------------
+----------------------------------------------------------
 
 5.Add the VotesController.cs file and following code
 (Right-click on the Controllers folder, then select 
@@ -283,7 +283,7 @@ return Char.ToUpper(name.First()) - 'A';
 }
 
 
---------------------------------------
+------------------------------------------------------------------------------------------
 
 6.Add a stateful back-end service to your application
 ● In Solution Explorer, right-click Services within the Voting application project and choose Add
@@ -291,7 +291,7 @@ return Char.ToUpper(name.First()) - 'A';
 ● In the New Service Fabric Service dialog, choose Stateful ASP.NET Core, name the service
 VotingData, then press Create.
 
---------------------------------------------
+----------------------------------------------------------------------------------
 
 7.Add the VoteDataController.cs file
 (In the VotingData project, right-click on the Controllers folder, then select Add->New item->Class.
