@@ -1,0 +1,134 @@
+#Steps for installation of Kali Linux
+1.To start your installation, boot with your chosen installation medium.Choose either Graphical install or Install 
+2.Select your preferred language. This will be used for both the setup process and once you are using Kali Linux.
+3.Specify your geographic location and click continue
+4.Select your keyboard layout and click continue
+5.The setup will now probe your network interfaces, looks for a DHCP service, and then prompt you to enter a hostname for your system.
+6.You may optionally provide a default domain name for this system to use
+7.Next, create the user account for the system (Full name, username and a strong password).
+8.Next, set your time zone and click continue
+9.The installer will now probe your disks and offer you various choices, depending on the setup.
+10.Select the disk to be partitioned. Depending on your needs, you can choose to keep all your files in a single partition
+11.Next, you’ll have one last chance to review your disk configuration before the installer makes irreversible changes
+12.Kali Linux uses a central repository to distribute applications. You’ll need to enter any appropriate proxy information as needed
+13.Next you can select which metapackages you would like to install
+14.Next confirm to install the GRUB boot loader.
+15.Select the hard drive to install the GRUB bootloader in
+16.Finally, click Continue to reboot into your new Kali Linux installation.
+
+
+-----------------------------------------------------------
+
+#Steps for installation of metasploit in Kali Linux
+1.First, you need to update the local package repository and then install Metasploit by
+ running the apt commands as given:
+    $ sudo apt update
+    $ sudo apt install metasploit-framework
+2.The commands to download the script and install Metasploit on Linux.
+    $ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+    $ sudo chmod 755 msfinstall
+    $ sudo ./msfinstall
+3.To start the database, simply execute the “start” command as given below:
+    $ sudo msfdb start
+4.After starting the database, let’s initialize it by using the “init” command:
+    $ sudo msfdb init
+5.Next, check the status of the database for confirmation:
+    $ sudo msfdb status
+6.Once you have set up the database you can open the Metasploit framework by executing the given command:
+    $ msfconsole
+7.When the Metasploit starts, you can confirm if the database is connected or not by checking the status. 
+    msf6 > db_status
+
+------------------------------------------------------------
+
+#Installation of powershell in Kali Linux
+1.We begin by installing the necessary dependencies, most of which should already be installed in your 
+Kali installation by default: apt update && apt -y install curl gnupg apt-transport-https
+2.Next, we need to download and add the public repository GPG key so APT will trust the packages and alert you to any 
+issues with package signatures: curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+3.With the GPG key added, we proceed to add the Microsoft package repository to its own package list file under /etc/apt/sources.list.d/ and 
+update the list of available packages: 
+    echo> /etc/apt/sources.list.d/powershell.list 
+    apt update
+4.Finally, we proceed to install the powershell package:
+    apt -y install powershell
+
+#Install powercat in kali Linux
+1.Update apt database with the following command: sudo apt-get update
+2.After updating apt database, We can install powercat by running the following 
+    command: sudo apt-get -y install powercat
+
+-----------------------------------------------------------
+
+#Metasploit installation steps
+1.Visit http://windows.metasploit.com/metasploitframework-latest.msi to download the Windows installer.
+2.After you download the installer, locate the file and double-click the installer icon to start the installation process.
+3.When the Setup screen appears, click Next to continue.
+4.Read the license agreement and select the I accept the license agreement option. Click Next to continue.
+5.Browse to the location where you want to install the Metasploit Framework. By default, the framework is installed on the C:\ Metasploit-framework. Click Next to continue.
+6.Click Install.
+7.The installation process can take 5-10 minutes to complete. When the installation completes, click the Finish button.
+8.To launch msfconsole after the installation completes, run the following from the command line: msfconsole.bat
+
+---------------------------------------------------------
+
+#IP tracing
+1.First, press the Windows key and the “R” button. 
+  Then type “cmd” into the text box that appears and click “OK.”
+2.Type “ping” followed by the URL of the website to get its IP.
+3.The “tracert” command lets you see what locations your data is going through.
+4.Websites like What Is My IP Address let you search for the approximate location 
+  of any IP address, so you can trace an IP address free.
+
+#How to Track IP Address via Email
+5.Find the email you’re going to trace and open the dropdown menu. 
+  This will normally be three dots at the top or bottom of the email.
+6.Choose the option that says something like “open raw email” or “view original.”
+7.In the raw email data, there will be several IP addresses. 
+  You should check each of these.
+8.You can now put these addresses into any lookup tool to find the sender’s country.
+
+---------------------------------------------------------
+
+#Steps of WireShark setup
+1.After Installing WireShark apk double click and start the setup process
+2.Dialog box appears select NEXT and select NOTED and press enter
+3.Choose components of WireShark select NEXT and press enter
+4.Select shortcuts and file extensions and click NEXT
+5.Choose install location by default or browse the location you want and click NEXT
+6.Select Packet Capture and click NEXT
+7.Scroll down and read License Agreement and after that click "I AGREE"
+8.After installation completed click NEXT
+9.Accept SETUP: License Aggrement and click NEXT
+10.In SETUP:Installation Options select FULL as type of install from dropdown and click NEXT
+11.After above process setup will be completed for WireShark and click Close
+
+-----------------------------------------------------
+
+#NMAP commands:
+1.TCP Connect Port Scan
+SYNTAX: nmap -sT <IP Address>
+
+2.TCP SYN Port Scan
+SYNTAX: nmap -sS <IP Address> 
+
+3.Version Scan
+SYNTAX: nmap -sV <IP Address>
+
+4.UDP Port Scan
+SYNTAX: nmap -sU <IP Address>
+
+5.OS Fingerprinting
+SYNTAX: nmap – O <IP Address>
+
+6.Scan OS Information
+SYNTAX: nmap -A <IP Address>
+
+7.Scan Top Ports
+SYNTAX: nmap -F <IP Address>
+
+8.TCP ACK Port Scan
+SYNTAX: nmap -sA <IP Address>
+
+9.Ping Scan
+SYNTAX: nmap -sP <IP Address>
